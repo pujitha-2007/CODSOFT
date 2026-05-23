@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pujitha Portfolio</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#c7d8f5;
+    }
+
+    /* HERO */
+
+    .hero{
+      width:100%;
+      height:100vh;
+      background:
+      linear-gradient(rgba(15,23,42,0.88),rgba(30,41,59,0.88)),
+      url("background.jpg");
+      background-size:cover;
+      background-position:center;
+      color:white;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:85%;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 0;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+      color:#38bdf8;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin:0 15px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-size:17px;
+    }
+
+    nav ul li a:hover{
+      color:#38bdf8;
+    }
+
+    /* HERO CONTENT */
+
+    .content{
+      width:85%;
+      margin:auto;
+      height:80vh;
+      display:flex;
+      justify-content:flex-start;
+      align-items:center;
+    }
+
+    .text{
+      width:50%;
+    }
+
+    .text h3{
+      color:#38bdf8;
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .text h1{
+      font-size:75px;
+      margin-bottom:20px;
+    }
+
+    .text p{
+      font-size:20px;
+      line-height:35px;
+      color:rgba(255,255,255,0.75);
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:13px 30px;
+      background:#38bdf8;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:white;
+      color:#0f172a;
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:80px 10%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:50px;
+      color:#0f172a;
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:flex;
+      align-items:center;
+      gap:50px;
+    }
+
+    .about img{
+      width:260px;
+      height:340px;
+      object-fit:cover;
+      border-radius:15px;
+      box-shadow:0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .about-text p{
+      font-size:20px;
+      line-height:38px;
+      margin-bottom:20px;
+      color:#1e293b;
+    }
+
+    /* SKILLS */
+
+    .skills{
+      text-align:center;
+    }
+
+    .skill-heading{
+      margin:25px 0 20px;
+      color:#0f172a;
+      font-size:28px;
+    }
+
+    .skills span{
+      display:inline-block;
+      background:white;
+      color:#0f172a;
+      padding:12px 22px;
+      margin:10px;
+      border-radius:30px;
+      font-size:17px;
+      box-shadow:0 0 10px rgba(0,0,0,0.08);
+    }
+
+    .skills span:hover{
+      background:#38bdf8;
+      color:white;
+      transform:scale(1.05);
+    }
+
+    /* PROJECTS */
+
+    .project-box{
+      background:white;
+      padding:25px;
+      margin-bottom:25px;
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(0,0,0,0.08);
+    }
+
+    .project-box h2{
+      color:#0f172a;
+      margin-bottom:12px;
+    }
+
+    .project-box p{
+      font-size:18px;
+      line-height:30px;
+    }
+
+    /* ACHIEVEMENTS */
+
+    .achievements-list{
+      max-width:800px;
+      margin:auto;
+      font-size:18px;
+      line-height:40px;
+      color:#1e293b;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    .contact a{
+      color:#0f172a;
+      text-decoration:none;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:22px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .content{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .text{
+        width:100%;
+      }
+
+      .text h1{
+        font-size:50px;
+      }
+
+      .about{
+        flex-direction:column;
+      }
+
+      .about img{
+        width:220px;
+        height:300px;
+      }
+
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:15px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+
+    <nav>
+      <div class="logo">Pujitha.k</div>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+
+      <div class="text">
+
+        <h3>Hello, I'm</h3>
+        <h1>Pujitha Karampudi</h1>
+
+        <p>
+          I am a Computer Science student and passionate developer with experience in hackathons, bootcamps, and technical certifications. I enjoy applying my skills to real-world challenges and continuously growing as a software developer.
+        </p>
+
+        <a href="#" class="btn">Hire Me</a>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <h1 class="title">About Me</h1>
+
+    <div class="about">
+
+      <img src="profile.jpeg" alt="Profile">
+
+      <div class="about-text">
+
+        <p>
+          I am currently pursuing B.Tech in Computer Science Engineering with a passion for technology and web development.
+        </p>
+
+        <p>
+          I have knowledge in programming languages like C, Java, Python, and front-end development.
+        </p>
+
+        <p>
+          I am eager to gain practical experience through internships, grow as a successful software developer, and build innovative projects that solve real-world problems.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+
+    <h1 class="title">💡 My Skills</h1>
+
+    <div class="skills">
+
+      <h2 class="skill-heading">Technical Skills</h2>
+
+      <span>C</span>
+      <span>Java</span>
+      <span>HTML</span>
+      <span>Python</span>
+      <span>Web Development</span>
+      <span>JavaScript</span>
+
+      <h2 class="skill-heading">Core Strengths</h2>
+
+      <span>Problem Solving</span>
+      <span>Communication</span>
+      <span>Team Work</span>
+      <span>Time Management</span>
+      <span>Creativity</span>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+
+    <h1 class="title">Projects</h1>
+
+    <div class="project-box">
+      <h2>SPYDI BOT – Smart Wall Cleaning Robot</h2>
+      <p>Automated robot for safe wall cleaning.</p>
+    </div>
+
+    <div class="project-box">
+      <h2>JOB SPORTER – Job Portal Website</h2>
+      <p>Job posting and resume application platform.</p>
+    </div>
+
+    <div class="project-box">
+      <h2>AGRIORBIT – Local Services Platform</h2>
+      <p>Connects users with verified service providers.</p>
+    </div>
+
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+
+    <h1 class="title">Achievements</h1>
+
+    <div class="achievements-list">
+
+      <p>Selected in IDE Boot Camp at NIT Calicut</p>
+      <p>Participant in DEVJAM 0.1 Hackathon</p>
+      <p>Participant in VISION-X Hackathon</p>
+      <p>Top 5 in Ratan Tata Innovation Hub Bootcamp</p>
+      <p>Completed C, Python, and Generative AI certifications</p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <h1 class="title">Contact Me</h1>
+
+    <div class="contact">
+
+      <p>Email: pujithakarampudi.pk@gmail.com</p>
+      <p>Phone: 9059343059</p>
+
+      <p>
+        GitHub:
+        <a href="https://github.com/pujitha-2007" target="_blank">github.com/pujitha-2007</a>
+      </p>
+
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/pujitha-karampudi-32336b340" target="_blank">Profile</a>
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Pujitha Portfolio | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
